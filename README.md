@@ -1,2 +1,36 @@
 # playwright-ts-automation-framework
-This build is a Playwright + TypeScript framework. It's one of the most in-demand stacks right now, it handles UI and API testing in one tool, and it has built-in auto-waiting, tracing, parallel runs, and a good HTML reporter.
+
+Playwright + TypeScript browser automation tests.
+
+## Requirements
+
+- Node.js 22 or later
+- npm (included with Node.js)
+
+## Setup after cloning
+
+Run these commands from the project root:
+
+```powershell
+npm ci
+npx playwright install
+```
+
+`npm ci` installs the exact dependency versions recorded in `package-lock.json`.
+Playwright browser binaries are installed separately from npm packages.
+
+## Run tests
+
+```powershell
+npm test
+```
+
+Optional:
+
+```powershell
+npm run test:headed
+npm run test:ui
+```
+
+The test configuration runs the suite in Chromium, Firefox, and WebKit. Install
+the browsers with `npx playwright install` before running the tests.
